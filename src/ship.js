@@ -1,0 +1,22 @@
+class Ship {
+    constructor(length, hits, sunk) {
+        this.length = length;
+        this.hits = 0;
+        this.sunk = false;
+    }
+
+    hit() {
+        return this.hits += 1;
+    }
+
+    isSunk() {
+        if (this.hits === this.length) {
+            this.sunk = true;
+            return;
+        }
+
+        return;
+    }
+}
+
+export { Ship }
