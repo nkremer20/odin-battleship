@@ -1,3 +1,5 @@
+import { Ship } from './ship';
+
 class Cell {
     constructor(cellStatus=0, cellID) {
         // Status contains the current state of the cell
@@ -39,6 +41,42 @@ class Gameboard {
 
         return matrix;
     }
+
+    #getCellPostion(cellID) {
+        const row = cellID.charCodeAt(0) - 65;
+        const col = parseInt(cellID.slice(1)) - 1;
+
+        return [row, col];
+    }
+
+    // TODO: (Private) Validate Placement
+
+    // TODO: Place Ship
+    placeShip(cell, ship) {
+        if (cell.cellStatus !== 0) {
+            console.log('Invlaid Ship Location');
+            return;
+        }
+        else {
+            let [row, col] = this.#getCellPostion(cell.cellID);
+
+            for (let i = 0; i < ship.length; i++) {
+                this.board[row][col].cellStatus = 1;
+
+                if (ship.orientaion === 0) {
+                    col++;
+                }
+                else {
+                    row++;
+                }
+            }
+            
+        }
+    }
+
+    // TODO: Receive Attack
+
+    // TODO: Game Won
 }
 
-export { Gameboard }
+export { Gameboard, Cell }
