@@ -75,8 +75,14 @@ class Gameboard {
     }
 
     // TODO: Receive Attack
+    receiveAttack(cell) {
+        return;
+    }
 
     // TODO: Game Won
+    gameWon() {
+        return
+    }
 }
 
 export { Gameboard, Cell }
