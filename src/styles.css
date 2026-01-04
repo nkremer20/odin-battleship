@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
 html, body {
     margin: 0;
     padding-top: 0;
+    background-color: black;
+    font-family: "Kantumruy Pro", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6, p, button {
@@ -24,4 +35,26 @@ textarea {
 
 button {
     cursor: pointer;
+    background-color: rgb(78, 168, 226);
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container > .subtitle {
+    color: rgb(246, 236, 78);
+    font-size: 1.5rem;
+}
+
+.title-container > .title {
+    font-family: "Black Ops One", system-ui;
+    color: white;
+    font-size: 6rem;
 }
