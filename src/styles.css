@@ -4,7 +4,12 @@
 html, body {
     margin: 0;
     padding-top: 0;
-    background-color: black;
+    background-color: #0b0c10; /* fallback */
+    background:
+      radial-gradient(1200px 600px at 20% 0%, rgba(255,255,255,0.06), rgba(255,255,255,0) 60%),
+      radial-gradient(1000px 500px at 80% 100%, rgba(255,255,255,0.04), rgba(255,255,255,0) 55%),
+      linear-gradient(180deg, #0f1117 0%, #0b0c10 100%);
+    background-attachment: fixed, fixed, fixed;
     font-family: "Kantumruy Pro", sans-serif;
     color: white;
     display: flex;
@@ -58,3 +63,70 @@ button {
     color: white;
     font-size: 6rem;
 }
+
+/* .ship {
+    background-color: rgb(209, 210, 221);
+    position: absolute;
+    height: 7%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} */
+
+/* .peg {
+    z-index: 1;
+    background-color: rgb(188, 189, 199);
+    height: 22px;
+    width: 22px;
+    border-radius: 100%;
+}
+
+.aircraft-carrier {
+    width: 30%;
+    border-radius: 5px;
+    top: 5%;
+    right: 0;
+} */
+
+/* .cruiser {
+    width: 15%;
+    top: 2%;
+    left: 10%;
+    border-radius: 50px 60% 60% 50px;
+    transform: rotate(90deg);
+    overflow: visible;
+} */
+
+/* .cruiser::after {
+    content: '';
+    position: absolute;
+    right: -13px;
+    top: 50%;
+    transform: translateY(-51.5%);
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 18px solid rgb(209, 210, 221);
+} */
+
+/* .patrol-boat {
+    width: 15%;
+    top: 5%;
+    left: 30%;
+    border-radius: 50px 60% 60% 50px;
+    overflow: visible;
+} */
+
+/* .patrol-boat::after {
+    content: '';
+    position: absolute;
+    right: -13px;
+    top: 50%;
+    transform: translateY(-51.5%);
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 18px solid rgb(209, 210, 221);
+} */
