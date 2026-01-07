@@ -76,6 +76,24 @@ class Gameboard {
 
     // TODO: Receive Attack
     receiveAttack(cell) {
+        try {
+            const statusValue = cell.cellStatus;
+        } catch (error) {
+            return;
+        }
+
+        if (statusValue === 1) {
+            cell.cellStatus = 2;
+
+            // TODO: Update Ship object hits
+
+            return true;
+
+        } else if (statusValue === 0) {
+            cell.cellStatus = 3;
+            return false;
+        }
+
         return;
     }
 
