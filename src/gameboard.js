@@ -76,6 +76,7 @@ class Gameboard {
 
     // TODO: Receive Attack
     receiveAttack(cell) {
+        // Catch invalid cell value
         try {
             const statusValue = cell.cellStatus;
         } catch (error) {
